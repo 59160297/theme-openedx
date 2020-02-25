@@ -7,36 +7,49 @@
 %>
 <%namespace name='static' file='static_content.html'/>
 <!-- footer overrides for stanford theme go here -->
-<div class="wrapper-footer">
-  <footer>
-    <div class="colophon">
-      <nav class="nav-colophon">
-        <ol>
-          <li><a href="${reverse('about')}">${_("About")}</a></li>
-          <li><a href="${reverse('about')}#careers">${_("Careers")}</a></li>
-          <li><a href="${reverse('about')}#contact">${_("Contact")}</a></li>
-          <li><a href="${reverse('tos')}">${_("Terms of Service")}</a></li>
-          <li><a href="${reverse('tos')}#privacy">${_("Privacy Policy")}</a></li>
-          <li><a href="${reverse('tos')}#honor">${_("Honor Code")}</a></li>
-          <li><a href="${reverse('tos')}#copyright">${_("Copyright")}</a></li>
-        </ol>
-      </nav>
+<div class="wrapper-footer" style="background-color: currentColor;">
+  <!-- Footer -->
+<footer class="page-footer font-small teal pt-4">
 
-      % if context.get('include_language_selector', footer_language_selector_is_enabled()):
-          <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
-      % endif
+  <!-- Footer Text -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold" style="color: whitesmoke;">CONTACT US</h5>
+        <p>Burapha University
+          <br>
+           169 Long Hat Bangsaen Road, Saen Suk Subdistrict,
+           Mueang District, Chonburi Province 20131
+          <br>
+           Thailand
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mb-md-0 mb-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold" style="color: whitesmoke;">ABOUT</h5>
+        <a href="www.buu.ac.th"></a>
+
+      </div>
+      <!-- Grid column -->
 
     </div>
-    <div class="references">
-      <span>Built on <a href="http://open.edx.org">OpenEdX</a>.</span>
-    </div>
+    <!-- Grid row -->
 
-    <div class="copyright">
-        <p><span>
-            ${_('Copyright {year}. All rights reserved.').format(
-                year=date.today().year
-            )}
-        </span></p>
-    </div>
-  </footer>
+  </div>
+  <!-- Footer Text -->
+</footer>
+<!-- Footer -->
 </div>
