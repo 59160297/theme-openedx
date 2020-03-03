@@ -6,14 +6,14 @@ from openedx.core.djangolib.markup import HTML
 
 
 <section class="home">
-  <header style="background-image: url(https://esaac.com.pk/images/content/education-consulting.jpg); height: 400px; border-radius: 8px;">
+  <header style="background-image: url(https://3bohsk43ipkewyk0v1ajbz21-wpengine.netdna-ssl.com/asia/wp-content/uploads/sites/4/2019/11/Agilyx-Training-Unit-4-Business-World-Online-Training-Agresso-Training.jpg); height: 350px; border-radius: 8px;">
     <div class="outer-wrapper">
       <div class="title" style=" border-radius: 8px;">
         <div class="heading-group">
           % if homepage_overlay_html:
             ${homepage_overlay_html}
           % else:
-            <h1 style="color: #333333;">${_(HTML("Welcome to "<strong>{university_name}</strong>")).format(university_name="Burapha University")}</h1>
+            <h1>${_(HTML("Welcome to "<strong>{university_name}</strong>")).format(university_name="Burapha University")}</h1>
              <p>${_("online education")}</p>
           % endif
         </div>
