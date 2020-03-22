@@ -5,22 +5,20 @@ from openedx.core.djangolib.markup import HTML
 %>
 <header>
   <style>
-   .centent-wrapper {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 0 15px 28px;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-   }
+    .window-wrap {
+      background-color: beige;
+    }
 
    .global-header {
-    box-shadow: 0 0.7px #333333;
-    border-bottom: 0px solid;
+    padding-bottom: 20px;
+   }
+
+   .home {
+    display: flex;
     justify-content: space-between;
-    max-width: 1170px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px 28px;
     box-sizing: border-box;
     flex-wrap: wrap;
    }
@@ -30,9 +28,9 @@ from openedx.core.djangolib.markup import HTML
 </header>
 
 <section class="home">
-  <header style="background-image: url(https://3bohsk43ipkewyk0v1ajbz21-wpengine.netdna-ssl.com/asia/wp-content/uploads/sites/4/2019/11/Agilyx-Training-Unit-4-Business-World-Online-Training-Agresso-Training.jpg); height: 350px; border-radius: 8px;">
+  <header style="background-image: url(https://i.ibb.co/3cncyNq/Group-4.png); height: 400px; border-radius: 8px;">
     <div class="outer-wrapper">
-      <div class="title" style=" border-radius: 8px;">
+      <div class="title" style=" border-radius: 8px; opacity: 0.8;">
         <div class="heading-group">
           % if homepage_overlay_html:
             ${homepage_overlay_html}
@@ -41,11 +39,6 @@ from openedx.core.djangolib.markup import HTML
              <p>${_("Informatic Burapha University")}</p>
           % endif
         </div>
-
-        <div>
-          <h1 class="our" style="text-align: center;">OUR COURSES</h1>
-        </div>
-
         % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
           <div class="course-search">
             <form method="get" action="/courses">
@@ -71,6 +64,11 @@ from openedx.core.djangolib.markup import HTML
     </div>
 
   </header>
+
+  <div>
+    <h1 class="our" style="text-align: center;">OUR COURSES</h1>
+  </div>
+
   <%include file="${courses_list}" />
 
 </section>
