@@ -19,6 +19,10 @@ from openedx.core.djangolib.markup import HTML
     width: 138px;
    }
 
+   .global-header .nav-links .secondary a.sign-in-btn, .global-header .nav-links .secondary .nav-item a.shopping-cart {
+      background-color: #192954;
+   }
+
    .home {
       display: flex;
       justify-content: space-between;
@@ -30,9 +34,10 @@ from openedx.core.djangolib.markup import HTML
    }
 
    .our {
-      text-align: center;
       margin-top: 30px;
-      margin-bottom: 30px;
+      font-size: 20px;
+      margin-left: auto;
+      margin-right: auto;
    }
 
    .highlighted-courses .courses {
@@ -82,7 +87,7 @@ from openedx.core.djangolib.markup import HTML
   </header>
 
     <div class="our">
-      <h2>OUR COURSES</h2>
+      <h2 style="font-weight: bold; color: #333333;">OUR COURSES</h2>
     </div>
 
   <%include file="${courses_list}" />
