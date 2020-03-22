@@ -3,7 +3,31 @@
 from django.utils.translation import ugettext as _
 from openedx.core.djangolib.markup import HTML
 %>
+<header>
+  <style>
+   .centent-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px 28px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+   }
 
+   .global-header {
+    box-shadow: 0 0.7px #333333;
+    border-bottom: 0px solid;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+   }
+
+
+  </style>
+</header>
 
 <section class="home">
   <header style="background-image: url(https://3bohsk43ipkewyk0v1ajbz21-wpengine.netdna-ssl.com/asia/wp-content/uploads/sites/4/2019/11/Agilyx-Training-Unit-4-Business-World-Online-Training-Agresso-Training.jpg); height: 350px; border-radius: 8px;">
@@ -17,6 +41,11 @@ from openedx.core.djangolib.markup import HTML
              <p>${_("Informatic Burapha University")}</p>
           % endif
         </div>
+
+        <div>
+          <h1 class="our" style="text-align: center;">OUR COURSES</h1>
+        </div>
+
         % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
           <div class="course-search">
             <form method="get" action="/courses">
