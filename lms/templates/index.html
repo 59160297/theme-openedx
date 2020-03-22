@@ -14,9 +14,9 @@ from openedx.core.djangolib.markup import HTML
       box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
    }
 
-   .logo {
-      height: 50px;
-      width: 140px;
+   .global-header .header-logo a .logo {
+    height: 50px;
+    width: 138px;
    }
 
    .home {
@@ -35,8 +35,8 @@ from openedx.core.djangolib.markup import HTML
       margin-bottom: 30px;
    }
 
-   .courses {
-      padding: 0px;
+   .highlighted-courses .courses {
+      padding: 0px 0 15px;
    }
 
 
@@ -82,7 +82,7 @@ from openedx.core.djangolib.markup import HTML
   </header>
 
     <div class="our">
-      <h3>OUR COURSES</h3>
+      <h2>OUR COURSES</h2>
     </div>
 
   <%include file="${courses_list}" />
