@@ -11,6 +11,8 @@ from openedx.core.djangolib.markup import HTML
 
    .global-header {
     padding-bottom: 20px;
+    border-bottom: 0px solid;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
    }
 
    .home {
@@ -21,6 +23,15 @@ from openedx.core.djangolib.markup import HTML
     padding: 0 15px 28px;
     box-sizing: border-box;
     flex-wrap: wrap;
+   }
+
+   .our {
+     text-align: center;
+     margin-top: 20px;
+   }
+
+   .courses {
+    padding: 0px 0 15px;
    }
 
 
@@ -64,10 +75,8 @@ from openedx.core.djangolib.markup import HTML
     </div>
 
   </header>
-
-  <div>
+  
     <h1 class="our" style="text-align: center;">OUR COURSES</h1>
-  </div>
 
   <%include file="${courses_list}" />
 
